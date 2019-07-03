@@ -1,0 +1,45 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.1'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    daggerVersion = '2.16'
+    // https://github.com/JakeWharton/butterknife
+    butterknifeVersion="8.4.0"
+    //https://github.com/alibaba/fastjson
+    fastjsonVersion="1.2.31"
+    fastjsonVersionAndroid="1.1.57.android"
+    multidexVersion="1.0.3"
+    // https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+    baseRecyclerViewAdapterHelperVersion="2.9.30"
+    //https://github.com/greenrobot/EventBus
+    eventbusVersion = "3.0.0"
+    // https://github.com/bumptech/glide
+    glideVersion = "4.9.0"
+    rxPermissionsVersion="0.9.1@aar"
+}
