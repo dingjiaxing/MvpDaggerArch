@@ -6,9 +6,16 @@ import android.text.TextUtils;
 import com.jackting.core.util.ToastUtils;
 import com.jackting.mvpdaggerarch.R;
 import com.jackting.mvpdaggerarch.base.AbsPresenter;
+import com.jackting.mvpdaggerarch.bean.entity.User;
 import com.jackting.mvpdaggerarch.di.ActivityScoped;
+import com.lib.http.result.HttpRespException;
+import com.lib.http.rxjava.observable.DialogTransformer;
+import com.lib.http.rxjava.observable.SchedulerTransformer;
+import com.lib.http.rxjava.observer.CommonObserver;
 
 import javax.inject.Inject;
+
+import io.reactivex.functions.Consumer;
 
 @ActivityScoped
 public class LoginPresenter extends AbsPresenter<LoginContract.View> implements LoginContract.Presenter{
@@ -21,29 +28,24 @@ public class LoginPresenter extends AbsPresenter<LoginContract.View> implements 
         if(!checkLogin(username,pwd)){
             return;
         }
-//        ApiClient.getInstance().login(username, pwd, "111", new ResponseSubscriber<LoginResponse>() {
-//            @Override
-//            protected void onRealSuccess(LoginResponse loginResponse) {
-//                String authorization = loginResponse.getData().getAuthorization();
-//                //解析数据，获取token和登录用户信息
-////                authorization = "XIB3mYRoZeUt8XKIFjym+mj3LEctMwEy2QoSoKxtVlMmSqpEE6w0nbP3I699BGRdsMaDyTQPpwegrQ1uRlgt+EFjvq1u5ssg5IbTR18sxWFGZsI3eooZ+GZf71TpW9I/YS6lGqI90RPvFVBoBzOpoZHpinD062hCd+A/b/iONQg=";
-//                IomsRSAUtils.decodeAuthorization(authorization);
-//                //缓存必要的数据
-//                Prefs.putString(SpEnum.USER_NAME.getType(), username);
-//                Prefs.putString(SpEnum.USER_PWD.getType(), pwd);
-//                Prefs.putString(SpEnum.USER_LOGIN_TIME.getType(), DateTimeUtil.DateText());
-//
-//                view.gotoMainActivity();
-//            }
-//            @Override
-//            protected void onOtherError(LoginResponse loginResponse) {
-//
-//            }
-//        });
+        model.login(username,pwd)
+                .compose(SchedulerTransformer.<User>transformer())
+                .compose(new DialogTransformer(mActivity).<User>transformer())
+                .subscribe(new CommonObserver<User>() {
+                    @Override
+                    public void onSuccess(User user) {
+                        view.loginSuccess();
+                    }
+                    @Override
+                    public void onFailed(HttpRespException responseException) {
+                        super.onFailed(responseException);
+                        ToastUtils.toastNetworkError();
+                    }
+                });
     }
 
     @Override
-    public void saveRememChecked(boolean checked) {
+    public void saveUsernameRemeCheckStatus(boolean checked,String username) {
         //记录是否勾选自动登录
 //        Prefs.putBoolean(SpEnum.REMEMBER_FLAG.getType(), checked);
     }

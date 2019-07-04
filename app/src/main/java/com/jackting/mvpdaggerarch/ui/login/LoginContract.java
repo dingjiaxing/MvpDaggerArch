@@ -6,11 +6,10 @@ import com.jackting.mvpdaggerarch.base.BaseView;
 
 public abstract class LoginContract {
     interface View extends BaseView<Presenter> {
-        void initPage(String versionName, String username, String pwd, boolean rememberPassword);
         /**
          * 进入首页
          */
-        void gotoMainActivity();
+        void loginSuccess();
     }
 
     interface Presenter extends BasePresenter<View> {
@@ -21,6 +20,6 @@ public abstract class LoginContract {
          */
         void login(String username, String pwd);
 
-        void saveRememChecked(boolean checked);
+        void saveUsernameRemeCheckStatus(boolean checked,String username);
     }
 }

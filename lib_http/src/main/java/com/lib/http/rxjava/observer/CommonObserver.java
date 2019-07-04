@@ -1,5 +1,7 @@
 package com.lib.http.rxjava.observer;
 
+import android.widget.Toast;
+
 /**
  * <p>Description:
  * <p>Company:
@@ -13,5 +15,6 @@ public abstract class CommonObserver<T> extends BaseObserver<T> {
     }
 
     public abstract void onSuccess(T t);
+
 
 }

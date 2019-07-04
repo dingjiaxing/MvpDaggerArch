@@ -52,4 +52,8 @@ public class ToastUtils {
         Toast.makeText(CoreApplication.getContext(), msg, Toast.LENGTH_LONG)
                 .show();
     }
+
+    public static void toastNetworkError() {
+        showToast("网络错误，请稍后重试");
+    }
 }

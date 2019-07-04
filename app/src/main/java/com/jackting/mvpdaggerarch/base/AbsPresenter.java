@@ -22,9 +22,15 @@ public abstract class AbsPresenter<V> {
 
     protected V view;
     protected DataRepository model=DataRepository.getInstance();
+    protected BaseActivity mActivity;
 
     public void takeView(V view){
         this.view = view;
+        if(view instanceof BaseActivity){
+            mActivity = (BaseActivity) view;
+        }else if( view instanceof BaseFragment){
+            mActivity = (BaseActivity)((BaseFragment)view).getActivity();
+        }
         init();
     }
 

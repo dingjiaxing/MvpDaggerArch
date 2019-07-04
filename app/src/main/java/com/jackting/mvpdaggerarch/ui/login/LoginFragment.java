@@ -30,8 +30,6 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
     EditText etPassword;
     @BindView(R.id.cb_remember)
     CheckBox cbRememberPassword;
-    @BindView(R.id.bt_login)
-    Button btLogin;
 
     @Inject
     public LoginFragment() {
@@ -40,12 +38,6 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
     @Override
     protected int getContentViewResId() {
         return R.layout.fragment_login;
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-//        presenter.dropView();
     }
 
     @OnClick({R.id.bt_login})
@@ -59,35 +51,19 @@ public class LoginFragment extends BaseFragment<LoginContract.Presenter> impleme
 
     @Override
     protected void init() {
-//        presenter.takeView(this);
-//        presenter.login("100000","123456");//测试代码，直接调用登录接口进行登录
+
     }
 
-    /**
-     * 初始化页面信息
-     */
-    @Override
-    public void initPage(String versionName, String username, String pwd, boolean rememberPassword) {
-        etUsername.setText(username);
-        cbRememberPassword.setChecked(rememberPassword);
-        if (rememberPassword) {
-            etPassword.setText(pwd);
-        }
-    }
-
-
-
-    @Override
-    public void gotoMainActivity() {
-        presenter.saveRememChecked(cbRememberPassword.isChecked());
-
-        Intent intent = new Intent(mActivity, MainActivity.class);
-        mActivity.startActivity(intent);
-        mActivity.finish();
-    }
 
     @Override
     protected BaseView getBaseView() {
         return this;
+    }
+
+    @Override
+    public void loginSuccess() {
+        Intent intent = new Intent(mActivity, MainActivity.class);
+        mActivity.startActivity(intent);
+        mActivity.finish();
     }
 }

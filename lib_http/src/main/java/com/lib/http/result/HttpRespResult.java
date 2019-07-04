@@ -8,22 +8,22 @@ package com.lib.http.result;
 
 public class HttpRespResult<T> {
 
-    private static final int SUCCESS_CODE = 1000;
+    private static final int SUCCESS_CODE = 0;
 
-    private String message;
-    private Integer code;
+    private String errorMsg;
+    private Integer errorCode;
     private T data;
 
     public boolean isSuccess() {
-        return code != null && code == SUCCESS_CODE;
+        return errorCode != null && errorCode == SUCCESS_CODE;
     }
 
     public String getMessage() {
-        return message;
+        return errorMsg;
     }
 
     public Integer getCode() {
-        return code;
+        return errorCode;
     }
 
     public T getData() {
@@ -33,8 +33,8 @@ public class HttpRespResult<T> {
     @Override
     public String toString() {
         return "HttpResponseResult{" +
-                "msg='" + message + '\'' +
-                ", code=" + code +
+                "msg='" + errorMsg + '\'' +
+                ", errorCode=" + errorCode +
                 ", data=" + data +
                 '}';
     }
