@@ -6,6 +6,7 @@ package com.jackting.mvpdaggerarch.di;
 import com.jackting.mvpdaggerarch.ui.login.LoginActivity;
 import com.jackting.mvpdaggerarch.ui.login.LoginModule;
 import com.jackting.mvpdaggerarch.ui.main.MainActivity;
+import com.jackting.mvpdaggerarch.ui.main.MainModule;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -24,9 +25,9 @@ public abstract class ActivityBindingModule {
     @ContributesAndroidInjector(modules = LoginModule.class)
     abstract LoginActivity loginActivity();
 
-//    @ActivityScoped
-//    @ContributesAndroidInjector(modules = MainModule.class)
-//    abstract MainActivity mainActivity();
+    @ActivityScoped
+    @ContributesAndroidInjector(modules = MainModule.class)
+    abstract MainActivity mainActivity();
 
 
 }

@@ -21,7 +21,7 @@ import com.jackting.mvpdaggerarch.data.DataRepository;
 public abstract class AbsPresenter<V> {
 
     protected V view;
-    protected DataRepository model=DataRepository.getInstance();
+    protected DataRepository model = DataRepository.getInstance();
     protected BaseActivity mActivity;
 
     public void takeView(V view){

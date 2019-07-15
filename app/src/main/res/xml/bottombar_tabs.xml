@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/selector_main_home"
+        title="@string/tab_home"
+        />
+    <tab
+        id="@+id/tab_profile"
+        icon="@drawable/selector_main_user"
+        title="@string/tab_profile"
+        />
+</tabs>

@@ -4,6 +4,7 @@ import com.jackting.core.base.BaseModel;
 import com.jackting.mvpdaggerarch.bean.entity.User;
 import com.jackting.mvpdaggerarch.data.http.HttpDataSourceImpl;
 import com.jackting.mvpdaggerarch.data.local.LocalDataSourceImpl;
+import com.lib.http.result.HttpRespResult;
 
 import io.reactivex.Observable;
 
@@ -30,7 +31,17 @@ public class DataRepository extends BaseModel implements HttpDataSource,LocalDat
     }
 
     @Override
-    public Observable<User> login(String username, String pwd) {
+    public Observable<HttpRespResult<User>> login(String username, String pwd) {
         return httpDataSource.login(username,pwd);
+    }
+
+    @Override
+    public void saveUser(User user) {
+        localDataSource.saveUser(user);
+    }
+
+    @Override
+    public User getUser() {
+        return localDataSource.getUser();
     }
 }

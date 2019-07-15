@@ -1,8 +1,9 @@
 package com.jackting.core.util;
 
 import android.app.Activity;
-import android.support.annotation.StringRes;
 import android.widget.Toast;
+
+import androidx.annotation.StringRes;
 
 import com.jackting.core.CoreApplication;
 import com.jackting.core.base.ActivityCollector;

@@ -8,6 +8,9 @@
 7. 日志打印：logger
 8. 提高效率：butterknife
 
+## 环境要求
+1. Android Studio 3.4.1及以上
+
 ## 设计模式
 1. 单例
 2. 代理

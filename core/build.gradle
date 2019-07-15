@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 28
@@ -22,6 +23,7 @@ android {
         }
     }
 
+
 }
 
 dependencies {
@@ -36,7 +38,7 @@ dependencies {
     //提高开发效率工具
     // https://github.com/JakeWharton/butterknife
     compile "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
-//    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
 
     //https://github.com/alibaba/fastjson
     compile "com.alibaba:fastjson:$rootProject.fastjsonVersion"
@@ -53,4 +55,12 @@ dependencies {
     // 日志
     implementation 'com.orhanobut:logger:2.2.0'
     implementation project(':lib_http')
+    // 配置数据存储 https://github.com/Tencent/MMKV
+//    annotationProcessor 'androidx.annotation:annotation:1.0.2'
+    implementation 'com.tencent:mmkv:1.0.22'
+//    implementation 'com.android.support:support-v4:28.0.0'
+
+
+
+
 }

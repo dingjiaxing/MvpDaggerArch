@@ -12,12 +12,12 @@
         android:focusableInTouchMode="true"
         android:orientation="vertical" >
 
-        <!--<ImageView-->
-            <!--android:layout_width="70dp"-->
-            <!--android:layout_height="70dp"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:layout_marginTop="50dp"-->
-            <!--android:src="@drawable/" />-->
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/ic_launcher2" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,18 +89,15 @@
 
             <CheckBox
                 android:id="@+id/cb_remember"
-                android:layout_width="@dimen/width_30"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/height_30"
                 android:gravity="center"
                 android:layout_gravity="center_vertical"
-                android:button="@drawable/selector_login_checkbox"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
                 android:text="@string/remember_password"
-                android:textColor="@color/text_input"
-                android:textSize="16sp" />
+                android:button="@drawable/selector_login_checkbox"
+                android:padding="5dp"
+                />
+
         </LinearLayout>
 
         <Button

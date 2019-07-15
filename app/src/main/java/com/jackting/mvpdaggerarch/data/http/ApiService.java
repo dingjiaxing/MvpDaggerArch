@@ -1,6 +1,7 @@
 package com.jackting.mvpdaggerarch.data.http;
 
 import com.jackting.mvpdaggerarch.bean.entity.User;
+import com.lib.http.result.HttpRespResult;
 
 import io.reactivex.Observable;
 import retrofit2.http.Field;
@@ -13,7 +14,7 @@ public interface ApiService {
 
     @POST(BASE_URL+"user/login")
     @FormUrlEncoded
-    Observable<User> login(@Field("username")String username,@Field("password")String password);
+    Observable<HttpRespResult<User>> login(@Field("username")String username, @Field("password")String password);
 
     @POST(BASE_URL+"user/register")
     @FormUrlEncoded

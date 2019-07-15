@@ -16,6 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -31,4 +35,11 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.daggerVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknifeVersion"
     implementation project(':lib_http')
+
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
+
+    // https://github.com/roughike/BottomBar
+//    implementation "com.roughike:bottom-bar:$rootProject.bottomBarVersion"
+    // https://github.com/Ashok-Varma/BottomNavigation
+    compile 'com.ashokvarma.android:bottom-navigation-bar:2.1.0'
 }
