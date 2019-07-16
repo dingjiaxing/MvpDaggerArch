@@ -7,6 +7,8 @@ import com.jackting.mvpdaggerarch.ui.login.LoginActivity;
 import com.jackting.mvpdaggerarch.ui.login.LoginModule;
 import com.jackting.mvpdaggerarch.ui.main.MainActivity;
 import com.jackting.mvpdaggerarch.ui.main.MainModule;
+import com.jackting.mvpdaggerarch.ui.web.WebActivity;
+import com.jackting.mvpdaggerarch.ui.web.WebModule;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -28,6 +30,10 @@ public abstract class ActivityBindingModule {
     @ActivityScoped
     @ContributesAndroidInjector(modules = MainModule.class)
     abstract MainActivity mainActivity();
+
+    @ActivityScoped
+    @ContributesAndroidInjector(modules = WebModule.class)
+    abstract WebActivity webActivity();
 
 
 }

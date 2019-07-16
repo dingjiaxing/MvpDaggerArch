@@ -1,14 +1,19 @@
 package com.jackting.mvpdaggerarch.ui.main.home;
 
+import android.content.Intent;
+import android.view.View;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.jackting.mvpdaggerarch.R;
 import com.jackting.mvpdaggerarch.adapter.HomeArticleAdapter;
 import com.jackting.mvpdaggerarch.base.BaseFragment;
 import com.jackting.mvpdaggerarch.base.BaseView;
 import com.jackting.mvpdaggerarch.bean.entity.Article;
 import com.jackting.mvpdaggerarch.di.ActivityScoped;
+import com.jackting.mvpdaggerarch.ui.web.WebActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +54,16 @@ public class MainHomeFragment extends BaseFragment<MainHomeContract.Presenter> i
         adapter=new HomeArticleAdapter(articleList);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(mActivity,RecyclerView.VERTICAL,false));
+
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                startActivity(
+                        new Intent(mActivity,WebActivity.class)
+                                .putExtra(WebActivity.URL_KEY,articleList.get(position).link)
+                );
+            }
+        });
     }
 
 

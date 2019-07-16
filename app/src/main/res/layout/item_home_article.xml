@@ -9,6 +9,8 @@
         android:id="@+id/tv_item_home_article"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="3dp"
+        android:padding="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         />
 </LinearLayout>

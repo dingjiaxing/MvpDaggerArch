@@ -15,8 +15,11 @@ public abstract class BaseFragment<P extends BasePresenter> extends CoreBaseFrag
     protected P presenter;
     private AbsPresenter absPresenter;
 
+    public   String TAG="BaseFragment";
+
     @Override
     protected void initCreate() {
+        TAG=this.getClass().getSimpleName();
         initHeader();
         initHeaderEvent();
         super.initCreate();
