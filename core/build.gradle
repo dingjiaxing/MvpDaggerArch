@@ -52,8 +52,9 @@ dependencies {
     compile "org.greenrobot:eventbus:$rootProject.eventbusVersion"
     // https://github.com/bumptech/glide
     compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
-    // 日志
+    // 日志:https://github.com/orhanobut/logger
     implementation 'com.orhanobut:logger:2.2.0'
+
     implementation project(':lib_http')
     // 配置数据存储 https://github.com/Tencent/MMKV
 //    annotationProcessor 'androidx.annotation:annotation:1.0.2'

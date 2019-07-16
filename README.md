@@ -11,11 +11,6 @@
 ## 环境要求
 1. Android Studio 3.4.1及以上
 
-## 设计模式
-1. 单例
-2. 代理
-3. 装饰者
-
 ## 模块介绍
 1. lib_http: 网络框架
 2. core: 核心库模块
@@ -64,8 +59,20 @@
 4. 本项目使用门面模式对其进行封装，可直接通过ConfigDataEngine类进行使用
 
 ### EventBus
+1. 源码地址：https://github.com/greenrobot/EventBus
+
 
 ### logger
+1. 源码地址：https://github.com/orhanobut/logger
+
+## 设计模式
+1. 单例
+* DataRepository中使用了单例
+2. 代理
+* HttpDataSource、LocalDataSource、HttpDataSourceImpl、LocalDataSourceImpl、DataRepository使用到了代理模式，可以做到做最少的改变替换数据层引擎
+3. 门面
+* ConfigDataEngine使用到了门面模式，易修改和维护，后续方便修改为其他引擎
+
 
 #### 参与贡献
 1. 框架设计：丁家星

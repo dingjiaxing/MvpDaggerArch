@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 
 import com.jackting.core.data.config.ConfigDataEngine;
+import com.orhanobut.logger.AndroidLogAdapter;
+import com.orhanobut.logger.Logger;
 import com.tencent.mmkv.MMKV;
 
 import dagger.android.AndroidInjector;
@@ -28,6 +30,8 @@ public abstract class CoreApplication extends DaggerApplication {
     private void init() {
         //初始化配置数据引擎
         ConfigDataEngine.init(this);
+        //初始化日志
+        Logger.addLogAdapter(new AndroidLogAdapter());
 
         //允许输出日志信息
 //        LogUtil.enableDebug();

@@ -49,6 +49,9 @@ dependencies {
 
     implementation 'com.jakewharton.rxbinding2:rxbinding:2.1.1'
 
+    // 日志:https://github.com/orhanobut/logger
+    implementation 'com.orhanobut:logger:2.2.0'
+
     // https://github.com/roughike/BottomBar
 //    implementation "com.roughike:bottom-bar:$rootProject.bottomBarVersion"
     // https://github.com/Ashok-Varma/BottomNavigation

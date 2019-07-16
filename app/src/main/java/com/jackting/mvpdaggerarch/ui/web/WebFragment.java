@@ -9,6 +9,7 @@ import com.jackting.mvpdaggerarch.R;
 import com.jackting.mvpdaggerarch.base.BaseFragment;
 import com.jackting.mvpdaggerarch.base.BaseView;
 import com.jackting.mvpdaggerarch.widget.web.MyWebView;
+import com.orhanobut.logger.Logger;
 
 import javax.inject.Inject;
 
@@ -41,7 +42,7 @@ public class WebFragment extends BaseFragment<WebContract.Presenter> implements 
     @Override
     protected void init() {
         url=getArguments().getString(WebActivity.URL_KEY);
-        Log.e(TAG,"url:"+url);
+        Logger.d("url",url);
         webView.loadUrl(url);
 
     }

@@ -13,6 +13,7 @@ import com.lib.http.result.HttpRespResult;
 import com.lib.http.rxjava.observable.DialogTransformer;
 import com.lib.http.rxjava.observable.SchedulerTransformer;
 import com.lib.http.rxjava.observer.CommonObserver;
+import com.orhanobut.logger.Logger;
 
 import javax.inject.Inject;
 
@@ -32,6 +33,7 @@ public class LoginPresenter extends AbsPresenter<LoginContract.View> implements 
                 .subscribe(new CommonObserver<HttpRespResult<User>>() {
                     @Override
                     public void onSuccess(HttpRespResult<User> userHttpRespResult) {
+                        Logger.d("login:",userHttpRespResult);
                         if(userHttpRespResult.isSuccess()){
                             model.saveUser(userHttpRespResult.getData());
                             view.loginSuccess();
@@ -45,20 +47,14 @@ public class LoginPresenter extends AbsPresenter<LoginContract.View> implements 
     @Override
     public void saveUsernameRemeCheckStatus(boolean checked,String username) {
         //记录是否勾选自动登录
-//        Prefs.putBoolean(SpEnum.REMEMBER_FLAG.getType(), checked);
+
     }
 
     /**
      * 初始化逻辑
      */
     public void init(){
-        //从sp中获取数据
-//        String username=Prefs.getString(SpEnum.USER_NAME.getType(), "");
-//        String pwd=Prefs.getString(SpEnum.USER_PWD.getType(), "");
-//        boolean rememberPassword = Prefs.getBoolean(SpEnum.REMEMBER_FLAG.getType(), false);
 
-        //调用view层进行初始化页面
-//        view.initPage(versionName,username,pwd,rememberPassword);
 
     }
 
