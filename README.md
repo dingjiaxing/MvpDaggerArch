@@ -11,6 +11,9 @@
 ## 环境要求
 1. Android Studio 3.4.1及以上
 
+## 使用文档
+1. [中文使用文档](https://blog.csdn.net/qq_23081779/article/details/96143754)：https://blog.csdn.net/qq_23081779/article/details/96143754
+
 ## 模块介绍
 1. lib_http: 网络框架
 2. core: 核心库模块
