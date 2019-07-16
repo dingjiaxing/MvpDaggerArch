@@ -1,4 +1,6 @@
 ## MvpDaggerArch
+0. 简介：MvpDaggerArch是基于google官方推荐的MVP+dagger开发模式、同时集成了retrofit+rxJava2、greenDao、MMKV等，
+设计的一套可用于中小型项目的完整解决方案，可用于android初学者学习架构、android开发者直接基于此架构进行开发。
 1. 技术选型：MVP+dagger+retrofit+rxJava2
 2. 开发模式：MVP+dagger
 3. 网络请求：retrofit+rxJava2
