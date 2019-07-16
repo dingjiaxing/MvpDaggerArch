@@ -16,6 +16,11 @@
 2. 代理
 3. 装饰者
 
+## 模块介绍
+1. lib_http: 网络框架
+2. core: 核心库模块
+3. app：主业务模块
+
 ### MVP+dagger
 #### 学习
 1. 浅析Dagger2的使用: https://www.cnblogs.com/all88/p/5788556.html
@@ -38,17 +43,25 @@
 * presenter：presenter层的实现
 2. ActivityBindingModule中新增activity
 3. ApiService中新增接口配置
-4. ApiClient中新增接口订阅配置
+
 #### 注意事项
 1. AndroidApplication中com.soft863.ioms.di.DaggerAppComponent为运行期生成的，所以要先点击Build->Make Project才能编译成功；
 2. 一定要注意注解，注解不对，运行时便会报一些奇怪的错误；
 
 ### retrofit+rxJava2
+1. 网路框架：基于okhttp，采用单一职责原则，结合rxJava2对其进行封装
+2. 测试api文档: https://www.wanandroid.com/blog/show/2
 
 ### greenDao
-
+1. 源码地址：https://github.com/greenrobot/greenDAO
+2. 使用解析：https://www.jianshu.com/p/53083f782ea2
 
 ### MMKV
+1. 源码地址：https://github.com/Tencent/MMKV
+2. 中文文档：https://github.com/Tencent/MMKV/blob/master/readme_cn.md
+3. 介绍：MMKV 是基于 mmap 内存映射的 key-value 组件，底层序列化/反序列化使用 protobuf 实现，性能高，稳定性强。
+从 2015 年中至今在微信上使用，其性能和稳定性经过了时间的验证。近期也已移植到 Android / macOS / Windows 平台，一并开源。
+4. 本项目使用门面模式对其进行封装，可直接通过ConfigDataEngine类进行使用
 
 ### EventBus
 
@@ -56,3 +69,4 @@
 
 #### 参与贡献
 1. 框架设计：丁家星
+2. 网络框架贡献：DevinSun

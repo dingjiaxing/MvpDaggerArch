@@ -19,10 +19,11 @@ public abstract class BaseFragment<P extends BasePresenter> extends CoreBaseFrag
     protected void initCreate() {
         initHeader();
         initHeaderEvent();
+        super.initCreate();
         if(absPresenter!=null){
             absPresenter.takeView(getBaseView());
         }
-        super.initCreate();
+
     }
 
     protected abstract BaseView getBaseView();

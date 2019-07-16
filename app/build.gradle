@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
 
+
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.jackting.mvpdaggerarch"
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -22,8 +23,18 @@ android {
     }
 }
 
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+greendao {
+    schemaVersion 1//数据库版本号
+    daoPackage 'com.jackting.mvpdaggerarch.data.greendao'//设置DaoMaster、DaoSession、Dao包名
+    targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    //targetGenDirTest：设置生成单元测试目录
+    //generateTests：设置自动生成单元测试用例
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
@@ -42,4 +53,10 @@ dependencies {
 //    implementation "com.roughike:bottom-bar:$rootProject.bottomBarVersion"
     // https://github.com/Ashok-Varma/BottomNavigation
     compile 'com.ashokvarma.android:bottom-navigation-bar:2.1.0'
+
+    //https://github.com/greenrobot/greenDAO
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
+
+//    compile 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0-alpha1'
 }
