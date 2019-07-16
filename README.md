@@ -50,11 +50,11 @@
 
 ### retrofit+rxJava2
 1. 网路框架：基于okhttp，采用单一职责原则，结合rxJava2对其进行封装
-2. 测试api文档: https://www.wanandroid.com/blog/show/2
+2. [测试api文档 ](https://www.wanandroid.com/blog/show/2)
 
 ### greenDao
-1. 源码地址：https://github.com/greenrobot/greenDAO
-2. 使用解析：https://www.jianshu.com/p/53083f782ea2
+1. [源码地址](https://github.com/greenrobot/greenDAO)
+2. [使用解析](https://www.jianshu.com/p/53083f782ea2)
 
 ### MMKV
 1. 源码地址：https://github.com/Tencent/MMKV
@@ -64,11 +64,11 @@
 4. 本项目使用门面模式对其进行封装，可直接通过ConfigDataEngine类进行使用
 
 ### EventBus
-1. 源码地址：https://github.com/greenrobot/EventBus
+1. [源码地址](https://github.com/greenrobot/EventBus)
 
 
 ### logger
-1. 源码地址：https://github.com/orhanobut/logger
+1. [源码地址](https://github.com/orhanobut/logger)
 
 ## 设计模式
 1. 单例
