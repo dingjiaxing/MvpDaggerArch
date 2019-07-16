@@ -21,11 +21,11 @@
 
 ### MVP+dagger
 #### 学习
-1. 浅析Dagger2的使用: https://www.cnblogs.com/all88/p/5788556.html
-2. 深入浅出Dagger2 : 从入门到爱不释手: https://www.jianshu.com/p/626b2087e2b1
-3. 谷歌官方demo：https://github.com/googlesamples/android-architecture/tree/todo-mvp/
-4. Google官方MVP+Dagger2架构详解: https://www.jianshu.com/p/01d3c014b0b1
-5. MVP与MVP+Dagger2的使用及比较:https://blog.csdn.net/shoushow_yeping/article/details/71421627
+1. [浅析Dagger2的使用]( https://www.cnblogs.com/all88/p/5788556.html)
+2. [深入浅出Dagger2](从入门到爱不释手: https://www.jianshu.com/p/626b2087e2b1)
+3. [谷歌官方demo](https://github.com/googlesamples/android-architecture/tree/todo-mvp/)
+4. [Google官方MVP+Dagger2架构详解]( https://www.jianshu.com/p/01d3c014b0b1)
+5. [MVP与MVP+Dagger2的使用及比较](https://blog.csdn.net/shoushow_yeping/article/details/71421627)
 #### 注解说明
 1. @Inject Inject主要有两个作用，一个是使用在构造函数上，通过标记构造函数让Dagger2来使用（Dagger2通过Inject标记可以在需要这个类实 例的时候来找到这个构造函数并把相关实例new出来）从而提供依赖，另一个作用就是标记在需要依赖的变量让Dagger2为其提供依赖。
 2. @Provide 用Provide来标注一个方法，该方法可以在需要提供依赖时被调用，从而把预先提供好的对象当做依赖给标注了@Injection的变量赋值。provide主要用于标注Module里的方法
