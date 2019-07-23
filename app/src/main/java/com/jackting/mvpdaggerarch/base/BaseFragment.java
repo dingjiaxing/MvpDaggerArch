@@ -4,6 +4,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jackting.core.base.BasePresenter;
+import com.jackting.core.base.BaseView;
 import com.jackting.core.base.CoreBaseFragment;
 import com.jackting.mvpdaggerarch.R;
 

@@ -5,9 +5,9 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
+import com.jackting.core.base.BaseView;
 import com.jackting.mvpdaggerarch.R;
 import com.jackting.mvpdaggerarch.base.BaseFragment;
-import com.jackting.mvpdaggerarch.base.BaseView;
 import com.jackting.mvpdaggerarch.widget.web.MyWebView;
 import com.orhanobut.logger.Logger;
 

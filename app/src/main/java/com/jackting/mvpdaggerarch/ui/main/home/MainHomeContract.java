@@ -1,7 +1,7 @@
 package com.jackting.mvpdaggerarch.ui.main.home;
 
-import com.jackting.mvpdaggerarch.base.BasePresenter;
-import com.jackting.mvpdaggerarch.base.BaseView;
+import com.jackting.core.base.BasePresenter;
+import com.jackting.core.base.BaseView;
 import com.jackting.mvpdaggerarch.bean.entity.Article;
 
 import java.util.List;

@@ -1,8 +1,8 @@
 package com.jackting.mvpdaggerarch.ui.login;
 
 
-import com.jackting.mvpdaggerarch.base.BasePresenter;
-import com.jackting.mvpdaggerarch.base.BaseView;
+import com.jackting.core.base.BasePresenter;
+import com.jackting.core.base.BaseView;
 
 public abstract class LoginContract {
     interface View extends BaseView<Presenter> {

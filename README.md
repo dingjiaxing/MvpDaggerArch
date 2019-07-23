@@ -15,6 +15,7 @@
 
 ## 使用文档
 1. [中文使用文档](https://blog.csdn.net/qq_23081779/article/details/96143754)
+2. 框架源码：https://github.com/dingjiaxing/MvpDaggerArch
 
 ## 模块介绍
 1. lib_http: 网络框架

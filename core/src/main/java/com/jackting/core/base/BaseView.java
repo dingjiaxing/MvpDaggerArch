@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.jackting.mvpdaggerarch.base;
+package com.jackting.core.base;
 
 public interface  BaseView<T> {
 

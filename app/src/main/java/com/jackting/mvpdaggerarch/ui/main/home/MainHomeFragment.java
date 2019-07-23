@@ -10,7 +10,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.jackting.mvpdaggerarch.R;
 import com.jackting.mvpdaggerarch.adapter.HomeArticleAdapter;
 import com.jackting.mvpdaggerarch.base.BaseFragment;
-import com.jackting.mvpdaggerarch.base.BaseView;
+import com.jackting.core.base.BaseView;
 import com.jackting.mvpdaggerarch.bean.entity.Article;
 import com.jackting.mvpdaggerarch.di.ActivityScoped;
 import com.jackting.mvpdaggerarch.ui.web.WebActivity;

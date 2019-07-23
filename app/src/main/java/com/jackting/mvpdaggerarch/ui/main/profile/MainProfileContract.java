@@ -1,7 +1,7 @@
 package com.jackting.mvpdaggerarch.ui.main.profile;
 
-import com.jackting.mvpdaggerarch.base.BasePresenter;
-import com.jackting.mvpdaggerarch.base.BaseView;
+import com.jackting.core.base.BasePresenter;
+import com.jackting.core.base.BaseView;
 
 public interface MainProfileContract {
 

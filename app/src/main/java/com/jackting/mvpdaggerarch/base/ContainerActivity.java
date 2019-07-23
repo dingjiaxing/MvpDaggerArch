@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
+import com.jackting.core.base.BasePresenter;
 import com.jackting.mvpdaggerarch.R;
 import com.jackting.mvpdaggerarch.util.ActivityUtils;
 
@@ -22,7 +23,7 @@ public abstract class ContainerActivity  extends BaseActivity{
         return R.layout.activity_container;
     }
 
-    protected void initOne(BaseFragment fragment,BasePresenter presenter){
+    protected void initOne(BaseFragment fragment, BasePresenter presenter){
         Bundle extras=getIntent().getExtras();
 //        Set keySet=extras.keySet();
         fragment.setArguments(extras);

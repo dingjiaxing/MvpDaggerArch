@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 
 import com.jackting.mvpdaggerarch.R;
-import com.jackting.mvpdaggerarch.base.BaseView;
+import com.jackting.core.base.BaseView;
 import com.jackting.mvpdaggerarch.ui.main.MainActivity;
 import com.jackting.mvpdaggerarch.base.BaseFragment;
 import com.jackting.mvpdaggerarch.di.ActivityScoped;
