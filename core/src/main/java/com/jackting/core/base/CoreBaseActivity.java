@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.PopupWindow;
 
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 
 import com.jackting.core.R;
@@ -42,7 +43,9 @@ public abstract class CoreBaseActivity extends DaggerAppCompatActivity {
 	 *
 	 * @return
 	 */
+	@LayoutRes
 	protected abstract int getContentViewResId();
+
 	protected  void findById(){}
 	protected  void setListener(){}
 	protected abstract void init();
